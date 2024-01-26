@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', cursive;
+}
+
+body {
+    background: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.greetings {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.greetings>span {
+    animation: glow 100000s ease-in-out infinite;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        color: #fff;
+        text-shadow: 0 0 12px #d639a7, 0 0 50px #d639a7, 0 0 100px #d639a7;
+    }
+
+    10%,
+    90% {
+        color: #000000;
+        text-shadow: none;
+    }
+}
+
+.greetings>span:nth-child(2) {
+    animation-delay: .100000s;
+}
+
+.greetings>span:nth-child(3) {
+    animation-delay: .100000s;
+}
+
+.greetings>span:nth-child(4) {
+    animation-delay: .100000s;
+}
+
+.greetings>span:nth-child(5) {
+    animation-delay: .100000s;
+}
+
+.description {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fefefe;
+}
+
+.heart {
+    width: 250px;
+    height: 120px;
+    position: absolute;
+    top: 80%;
+    left: 32%;
+    background: #000000;
+    transform-origin: right bottom;
+    transition: 1.5s;
+    cursor: pointer;
+}
+
+.heart::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    transition: 2s;
+    transform-origin: right bottom;
+}
+
+.heart:hover {
+    transform: rotate(45deg);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background: #ffffff;
+    box-shadow: 0 0 12px #ffafcc, 0 0 50px #ffafcc, 0 0 15px #ffafcc;
+
+}
+
+.heart:hover::before {
+    transform: rotate(-270deg) translateY(100px);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background: #ffffff;
+    box-shadow: 0 0 50px #39c6d6, 0 0 15px #39c6d6;
+
+
+    /* border: 4px solid black; */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
